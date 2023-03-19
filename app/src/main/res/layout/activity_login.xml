@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CustomerLoginActivity">
+
+    <EditText
+        android:id="@+id/phoneNumberEditTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="type phone number here"
+        android:inputType="number"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/lightBlack"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please enter your phone number to continue"
+        android:layout_below="@id/phoneNumberEditTxt"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="115dp"
+        android:backgroundTint="#9C27B0"
+        android:text="Click to continue"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

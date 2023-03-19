@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".Fragments.CustomerProfileFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ProfilePicImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/user_profile_icon" />
+
+    <TextView
+        android:id="@+id/UserNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="User Name"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/phoneNumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Rider Phone Number"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/SignOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignOut"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/EditDetailsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Details"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "772995514777",
+    "firebase_url": "https://carpooling-bad63-default-rtdb.firebaseio.com",
+    "project_id": "carpooling-bad63",
+    "storage_bucket": "carpooling-bad63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772995514777:android:a6ec4fda0637d5b77cd308",
+        "android_client_info": {
+          "package_name": "com.motorshare.motorshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772995514777-dt3uc1k3q3t6831evbojskc2tjgvqcqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.motorshare.motorshare",
+            "certificate_hash": "29e629d86edc7188324ff35fbce3b459ef7ebee2"
+          }
+        },
+        {
+          "client_id": "772995514777-8hkugsmvb7ng697743tplqijgud8ak9p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPE39qJFAhrR65oYjarZTHpxeny_uTlZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772995514777-8hkugsmvb7ng697743tplqijgud8ak9p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
