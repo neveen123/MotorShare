@@ -68,7 +68,7 @@
         android:id="@+id/RideDateEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint=" Ride Date (e.g:10-10-21)"
+        android:hint=" Ride Date (e.g:3/20/23)"
         android:inputType="date"
         android:textColor="@color/lightBlack"
         android:textSize="30dp" />
