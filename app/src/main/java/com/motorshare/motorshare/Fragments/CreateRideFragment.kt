@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import com.motorshare.motorshare.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
