@@ -60,4 +60,7 @@ dependencies {
 
     //Loads image into imageview form a link
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //GIF implementation
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 }

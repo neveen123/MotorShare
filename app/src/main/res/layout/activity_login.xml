@@ -6,26 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".Activities.CustomerLoginActivity">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/environment"
+        android:visibility="visible" />
+
     <EditText
         android:id="@+id/phoneNumberEditTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="type phone number here"
-        android:inputType="number"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/lightBlack"
         android:layout_centerInParent="true"
-        />
+        android:hint="type phone number here"
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please enter your phone number to continue"
         android:layout_below="@id/phoneNumberEditTxt"
-        android:textStyle="bold"
+        android:text="Please enter your phone number to continue"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/loginBtn"
