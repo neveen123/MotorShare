@@ -7,7 +7,11 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="gradleJvm" value="JDK" />
+=======
+        <option name="gradleJvm" value="11" />
+>>>>>>> 2223e54caaa55573f3399ea6378cacdf87ab2011
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
