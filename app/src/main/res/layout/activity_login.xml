@@ -10,13 +10,12 @@
         android:id="@+id/phoneNumberEditTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:hint="type phone number here"
         android:inputType="number"
+        android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/lightBlack"
-        android:layout_centerInParent="true"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"

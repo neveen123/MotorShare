@@ -117,7 +117,7 @@ class CreateRideFragment : Fragment() {
         //Accessing the google user id to create a unique ride  for unique users
         val userId = GoogleSignIn.getLastSignedInAccount(requireActivity())!!.id
 
-        //Fireabase dAtabase path to store the Ride details
+        //Fireabase database path to store the Ride details
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference.child("Rides")
 

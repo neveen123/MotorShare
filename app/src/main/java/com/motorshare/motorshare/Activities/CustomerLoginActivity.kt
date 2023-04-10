@@ -60,8 +60,9 @@ class CustomerLoginActivity() : AppCompatActivity() {
         //implementation of OnClickListener  to Perform signIn operation on Button click
         loginButton!!.setOnClickListener(View.OnClickListener {
             //Gets phone number from the EditText
-            val phoneNumber = phoneNumberEditTxt!!.text.toString().trim { it <= ' ' }
-            if (phoneNumber.isEmpty()) {
+            val phoneNumber = filterNumber(phoneNumberEditTxt!!.text.toString())
+
+            if (phoneNumber.length < 10) {
 
                 //Shows the Below Toast if the number editText is empty
                 Toast.makeText(
@@ -76,6 +77,16 @@ class CustomerLoginActivity() : AppCompatActivity() {
                 startActivityForResult(intent, 100)
             }
         })
+    }
+
+    public fun filterNumber(phoneNumber: String): String{
+        var phoneNumberEdit = phoneNumber
+        phoneNumberEdit = phoneNumberEdit.filterNot { it <= ' ' }
+        phoneNumberEdit = phoneNumberEdit.filterNot { it <= '-' }
+        phoneNumberEdit = phoneNumberEdit.filterNot { it <= '(' }
+        phoneNumberEdit = phoneNumberEdit.filterNot { it <= ')' }
+        phoneNumberEdit = phoneNumberEdit.filterNot { it <= '+' }
+        return phoneNumberEdit
     }
 
     @Deprecated("Deprecated in Java")
