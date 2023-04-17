@@ -6,26 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".Activities.CustomerLoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo3" />
+
     <EditText
         android:id="@+id/phoneNumberEditTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="type phone number here"
-        android:inputType="number"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/lightBlack"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        />
+        android:layout_marginTop="353dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="  type phone number here"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="326dp"
         android:layout_height="wrap_content"
-        android:text="Please enter your phone number to continue"
         android:layout_below="@id/phoneNumberEditTxt"
-        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="17dp"
+        android:text="Please enter your phone number to continue😎"
+        android:textColor="@color/black"
         android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/loginBtn"

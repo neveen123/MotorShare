@@ -81,6 +81,7 @@ class CreateRideFragment : Fragment() {
                 ridePriceEditTxt!!.text.toString().trim { it <= ' ' }.lowercase(Locale.getDefault())
             val phoneNumber = phoneNumberEditTxt!!.text.toString().trim { it <= ' ' }
 
+
             //Shows the below toast message if eny EditText field is empty
             if (riderName.isEmpty() || customerAddress.isEmpty() || destinationAddress.isEmpty() || totalPassengers.isEmpty() || rideDate.isEmpty() || rideTime.isEmpty() || ridePrice.isEmpty() || phoneNumber.isEmpty()) {
                 Toast.makeText(view.context, "Please, Fill all the details", Toast.LENGTH_SHORT)
@@ -127,7 +128,7 @@ class CreateRideFragment : Fragment() {
         //Assigining the customer Address and Destination Address to make Ride search Easy
         val customerAddrAndDestinationAddr = customerAddress + destinationAddress
 
-        //Storeing the ride Details in the HashMap
+        //Storing the ride Details in the HashMap
         userDetails["riderName"] = riderName
         userDetails["customerAddress"] = customerAddress
         userDetails["destinationAddress"] = destinationAddress

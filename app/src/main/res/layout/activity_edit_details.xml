@@ -8,23 +8,31 @@
 
     <EditText
         android:id="@+id/updatePhoneNumberEditTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:hint="Type number here"
+        android:layout_width="306dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="331dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Type new number here"
         android:inputType="number"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="28dp"
         android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Please update your phone number"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
         android:layout_below="@id/updatePhoneNumberEditTxt"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="18dp"
+        android:text="Please update your phone number"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/submitDetailsBtn"

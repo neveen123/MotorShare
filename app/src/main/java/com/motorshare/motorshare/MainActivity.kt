@@ -1,10 +1,12 @@
 package com.motorshare.motorshare
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.motorshare.motorshare.Activities.StartingActivity
 import com.motorshare.motorshare.Fragments.CreateRideFragment
 import com.motorshare.motorshare.Fragments.HomeFragment
@@ -12,8 +14,11 @@ import com.motorshare.motorshare.Fragments.CustomerProfileFragment
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.motorshare.motorshare.Activities.MapsActivity
+import com.motorshare.motorshare.Fragments.MapsFragment
 
 /**
  * activity created for Bottom Navigation
@@ -74,14 +79,22 @@ class MainActivity : AppCompatActivity() {
     private val bottomnavMethod =
         BottomNavigationView.OnNavigationItemSelectedListener { item -> //Setting the fragment to null
             var fragment: Fragment? = null
+
             when (item.itemId) {
                 R.id.homeMenu -> fragment = HomeFragment()
                 R.id.createRideMenu -> fragment = CreateRideFragment()
                 R.id.profileMenu -> fragment = CustomerProfileFragment()
+                R.id.mapsMenu -> fragment = MapsFragment()
             }
             //Replaces the fragment in the FrameLayout
             supportFragmentManager.beginTransaction().replace(R.id.FragmentContainer, fragment!!)
                 .commit()
+
+           /** val mapFragment = supportFragmentManager
+                .findFragmentById(R.id.map) as SupportMapFragment
+            mapFragment.getMapAsync(MapsActivity(activity as MapsActivity?))**/
             true
         }
 }
+
+

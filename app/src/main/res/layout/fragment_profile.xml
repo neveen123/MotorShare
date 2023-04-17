@@ -42,14 +42,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SignOut"
+        android:backgroundTint="#9C27B0"
         android:layout_margin="10dp"
+        android:textSize="20dp"
         android:layout_gravity="center"/>
 
     <Button
         android:id="@+id/EditDetailsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit Details"
+        android:text="Edit My Details"
+        android:textSize="20dp"
+        android:backgroundTint="#9C27B0"
         android:layout_margin="10dp"
         android:layout_gravity="center"/>
 </LinearLayout>

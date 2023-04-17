@@ -28,14 +28,14 @@ class HomeFragment : Fragment() {
     private var recyclerView: RecyclerView? = null
 
     // TODO: Rename and change types of parameters
-   /** var mParam1: String? = null
+    /** var mParam1: String? = null
     var mParam2: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        if (arguments != null) {
-            mParam1 = requireArguments().getString(ARG_PARAM1)
-            mParam2 = requireArguments().getString(ARG_PARAM2)
-        }
+    super.onCreate(savedInstanceState)
+    if (arguments != null) {
+    mParam1 = requireArguments().getString(ARG_PARAM1)
+    mParam2 = requireArguments().getString(ARG_PARAM2)
+    }
     }**/
 
     override fun onCreateView(
@@ -51,9 +51,9 @@ class HomeFragment : Fragment() {
         destinationAddressEditText = view.findViewById<View>(R.id.SearchDestinationEdit) as EditText
 
         //Recycler view to shows the Rides
-        recyclerView = view.findViewById<View>(R.id.RecyclerView) as RecyclerView
-        recyclerView!!.layoutManager = LinearLayoutManager(context)
-        recyclerView!!.adapter = rideInfoAdapter
+       // recyclerView = view.findViewById<View>(R.id.RecyclerView) as RecyclerView
+        //recyclerView!!.layoutManager = LinearLayoutManager(context)
+        //recyclerView!!.adapter = rideInfoAdapter
 
 
         //Implementation of onClickListener to find the Rides
@@ -78,20 +78,21 @@ class HomeFragment : Fragment() {
                         .equalTo(customerAndDestinatinAddr), Model::class.java
                 )
                 .build()
-            rideInfoAdapter = RideInfoAdapter(options)
-            //Starting the Adapter To listen for Data
-            rideInfoAdapter!!.startListening()
-
             recyclerView = view.findViewById<View>(R.id.RecyclerView) as RecyclerView
             recyclerView!!.layoutManager = LinearLayoutManager(context)
+
+            //Starting the Adapter To listen for Data
+            rideInfoAdapter!!.startListening()
             recyclerView!!.adapter = rideInfoAdapter
+            rideInfoAdapter = RideInfoAdapter(options)
+
+
             //Setting the Adapter to RecyclerView
-          //  recyclerView!!.adapter = rideInfoAdapter
         }
         return view
     }
 
-   /** companion object {
+    companion object {
         private const val ARG_PARAM1 = "param1"
         private const val ARG_PARAM2 = "param2"
         fun newInstance(param1: String?, param2: String?): HomeFragment {
@@ -101,5 +102,6 @@ class HomeFragment : Fragment() {
             args.putString(ARG_PARAM2, param2)
             fragment.arguments = args
             return fragment
-        }**/
+        }
     }
+}

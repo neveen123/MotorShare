@@ -40,7 +40,7 @@ class RideInfoAdapter(options: FirebaseRecyclerOptions<Model?>) :
         //Implementing the onClickListner to Book Ticket For User
         holder.bookRide.setOnClickListener { view ->
             val context = view.context
-            //Accessing No of Seats available in the Vehicle and decreases the value when user books one seat
+            //Accessing num of Seats available in the Vehicle and decreases the value when user books one seat
             val totalPassengersInt = (model.totalPassengers?.toInt() ?: - 1)
 
             //Books seats for the user if total available seats are greater than 0
@@ -51,7 +51,7 @@ class RideInfoAdapter(options: FirebaseRecyclerOptions<Model?>) :
                     FirebaseDatabase.getInstance().reference.child("Rides").child(it)
                         .child("totalPassengers").setValue(totalPassengersInt.toString())
                 }
-                Toast.makeText(view.context, "Successfully Registered for Ride", Toast.LENGTH_SHORT)
+                Toast.makeText(view.context, "Successfully booked your ride", Toast.LENGTH_SHORT)
                     .show()
 
                 //Restarts the intent to clear all the values after booking seat

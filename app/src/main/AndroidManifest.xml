@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -10,11 +13,33 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo3"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
-        <activity android:name="com.motorshare.motorshare.Activities.EditCustomerDetailsActivity" />
-        <activity android:name="com.motorshare.motorshare.Activities.StartingActivity" />
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="tiramisu">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAJLhjwT5vJ50Yc7xoXXIilxo6lyTisTrE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity android:name=".Activities.EditCustomerDetailsActivity" />
+        <activity android:name=".Activities.StartingActivity" />
         <activity android:name=".Activities.CustomerLoginActivity" />
-        <activity android:name="com.motorshare.motorshare.MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
