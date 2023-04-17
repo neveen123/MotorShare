@@ -9,30 +9,38 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="300dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
         android:src="@drawable/logo3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="312dp"
         android:text="MotorShare"
-        android:textColor="@color/black"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="60dp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/GetStartedBtn"
-        android:backgroundTint="#9C27B0"
         android:layout_width="363dp"
         android:layout_height="101dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="26dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="23dp"
         android:layout_marginBottom="97dp"
+        android:backgroundTint="#9C27B0"
         android:text="Let's Get You a Ride!"
-        android:textSize= "20dp"
-        android:textStyle="bold"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

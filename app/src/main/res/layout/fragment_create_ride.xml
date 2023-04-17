@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#53155E"
     tools:context=".Fragments.CreateRideFragment">
 
     <ScrollView
@@ -111,6 +112,133 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="Create Ride" />
+
+    <EditText
+        android:id="@+id/yourInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=" Your Information 🔎"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/RiderNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Rider Name"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/CustomerAddressEdit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Enter your current address"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/DestinationAddressEdit"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Enter destination address"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
+    <EditText
+        android:id="@+id/TotalPassengersEdit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Total num of passengers"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/RidePriceEdit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint=" Total cost ($2 per person)"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/RideDateEdit"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/search_layout_background"
+        android:hint=" Date of Ride (e.g: 3/20/23)"
+        android:inputType="date"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/RideTimeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Time of pickup (e.g: 7:30pm)"
+        android:inputType="text"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="28dp" />
+
+
+    <EditText
+        android:id="@+id/PhoneNumberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/search_layout_background"
+        android:hint="Your number"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="phone"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/CreateRideBtn"
+        android:layout_width="178dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Create Ride"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:backgroundTint="@color/white"/>
 
         </LinearLayout>
     </ScrollView>
