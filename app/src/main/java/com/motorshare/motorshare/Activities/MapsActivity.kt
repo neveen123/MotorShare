@@ -5,6 +5,11 @@ import android.os.Bundle
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import android.widget.Toast
+
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMap.OnPoiClickListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
@@ -12,7 +17,8 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.motorshare.motorshare.R
 import com.motorshare.motorshare.databinding.ActivityMapsBinding
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, OnPoiClickListener {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
@@ -20,8 +26,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
+        setContentView(R.layout.activity_maps)
+
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -39,11 +49,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * installed Google Play services and returned to the app.
      */
     override fun onMapReady(googleMap: GoogleMap) {
+
+        googleMap.setOnPoiClickListener(this)
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        // Add a marker in greenville  and move the camera
+        val greenville = LatLng(35.6127, -77.3664)
+        mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
+        mMap.addMarker(MarkerOptions().position(greenville).title("Greenville, NC"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(greenville))
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(15F))
+        mMap.isTrafficEnabled=true
     }
+
+    //respond to a user tapping on a POI such as a business or building
+    override fun onPoiClick(poi: PointOfInterest) {
+        Toast.makeText(this, """Clicked: ${poi.name}
+            Place ID:${poi.placeId}
+            Latitude:${poi.latLng.latitude} Longitude:${poi.latLng.longitude}""",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
 }
