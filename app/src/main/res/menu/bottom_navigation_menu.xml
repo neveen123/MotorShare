@@ -16,5 +16,9 @@
         android:title="Profile"
         android:id="@+id/profileMenu"
         android:icon="@drawable/user_profile_icon"/>
+    <item
+        android:title="Google Maps"
+        android:id="@+id/mapsMenu"
+        android:icon="@drawable/maps"/>
 
 </menu>
