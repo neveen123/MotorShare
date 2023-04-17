@@ -1,9 +1,12 @@
 package com.motorshare.motorshare
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.motorshare.motorshare.Activities.StartingActivity
 import com.motorshare.motorshare.Fragments.CreateRideFragment
@@ -15,6 +18,7 @@ import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.motorshare.motorshare.Fragments.MapsFragment
+import android.Manifest
 
 /**
  * activity created for Bottom Navigation
@@ -24,7 +28,7 @@ class MainActivity : AppCompatActivity() {
    var bottomNavigationView: BottomNavigationView? = null
    private lateinit var oneTapClient: SignInClient
    private lateinit var signInRequest: BeginSignInRequest
-
+   private val LOCATION_PERMISSION_REQUEST_CODE = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,8 +60,28 @@ class MainActivity : AppCompatActivity() {
             // Automatically sign in when exactly one credential is retrieved.
             .setAutoSelectEnabled(true)
             .build()
+        // Check if location permission is granted
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            != PackageManager.PERMISSION_GRANTED) {
+
+            // Request location permission
+            ActivityCompat.requestPermissions(this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE)
+        }
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,
+                                            grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted
+            } else {
+                // Permission denied
+            }
+        }
+    }
     override fun onStart() {
         super.onStart()
 
@@ -91,6 +115,7 @@ class MainActivity : AppCompatActivity() {
             mapFragment.getMapAsync(MapsActivity(activity as MapsActivity?))**/
             true
         }
+
 }
 
 
