@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Motorshare</string>
     <string name="your_web_client_id">\"772995514777–8hkugsmvb7ng697743tplqijgud8ak9p.apps.googleusercontent.com"\</string>
-    <string name="home">Home</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="home">Home</string>
     <string name="location_permission_denied">Permission Denied</string>
     <string name="permission_required_toast">Permission is required</string>
     <string name="permission_rationale_location">Access to the location service is required</string>

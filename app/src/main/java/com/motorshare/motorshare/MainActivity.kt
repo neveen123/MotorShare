@@ -1,12 +1,10 @@
 package com.motorshare.motorshare
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.motorshare.motorshare.Activities.StartingActivity
 import com.motorshare.motorshare.Fragments.CreateRideFragment
 import com.motorshare.motorshare.Fragments.HomeFragment
@@ -14,10 +12,8 @@ import com.motorshare.motorshare.Fragments.CustomerProfileFragment
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.motorshare.motorshare.Activities.MapsActivity
 import com.motorshare.motorshare.Fragments.MapsFragment
 
 /**

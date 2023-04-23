@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import com.motorshare.motorshare.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -117,7 +118,7 @@ class CreateRideFragment : Fragment() {
         //Accessing the google user id to create a unique ride  for unique users
         val userId = GoogleSignIn.getLastSignedInAccount(requireActivity())!!.id
 
-        //Fireabase dAtabase path to store the Ride details
+        //Fireabase database path to store the Ride details
         val database = FirebaseDatabase.getInstance()
         val myRef = database.reference.child("Rides")
 
