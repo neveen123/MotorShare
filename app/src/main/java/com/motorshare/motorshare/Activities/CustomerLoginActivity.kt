@@ -2,11 +2,14 @@ package com.motorshare.motorshare.Activities
 
 import android.app.ProgressDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.motorshare.motorshare.R
 import com.motorshare.motorshare.MainActivity
@@ -20,6 +23,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.FirebaseDatabase
+import android.Manifest
 
 /**
  * activity created to make the user login using google account and
@@ -31,6 +35,7 @@ class CustomerLoginActivity() : AppCompatActivity() {
     var progressDialog: ProgressDialog? = null
     private var loginButton: Button? = null
     var phoneNumberEditTxt: EditText? = null
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -77,6 +82,20 @@ class CustomerLoginActivity() : AppCompatActivity() {
                 startActivityForResult(intent, 100)
             }
         })
+        val locationPermissionRequest = registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { permissions ->
+            when {
+                permissions.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+                    // Precise location access granted.
+                }
+                permissions.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+                    // Only approximate location access granted.
+                } else -> {
+                // No location access granted.
+            }
+            }
+        }
     }
 
     public fun filterNumber(phoneNumber: String): String{
