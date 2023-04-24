@@ -31,8 +31,9 @@
         android:layout_marginTop="353dp"
         android:background="@drawable/search_layout_background"
         android:hint="  type phone number here"
+        android:textColorHint="@color/white"
         android:inputType="number"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25dp" />
 
     <TextView
@@ -51,7 +52,7 @@
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="115dp"
         android:backgroundTint="#9C27B0"

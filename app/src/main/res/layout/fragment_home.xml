@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.HomeFragment">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/environment"
+        android:visibility="visible" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,7 +19,7 @@
         android:orientation="vertical">
 
 
-        <EditText
+        <TextView
             android:id="@+id/Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,6 +39,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/search_layout_background"
             android:hint=" Enter your location address"
+            android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
@@ -45,6 +53,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/search_layout_background"
             android:hint=" Enter the destination address"
+            android:textColorHint="@color/black"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
@@ -55,6 +64,7 @@
         android:layout_gravity="center"
         android:backgroundTint="#9C27B0"
         android:textSize="20dp"
+
         android:text="Search Recent Rides" />
 
     </LinearLayout>
@@ -64,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/SearchLayout"
+        android:textColor="#cccc00"
         android:layout_margin="20dp"/>
 
 </RelativeLayout>
