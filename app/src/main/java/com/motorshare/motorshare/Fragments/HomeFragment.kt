@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
         destinationAddressEditText = view.findViewById<View>(R.id.SearchDestinationEdit) as EditText
 
         //Recycler view to shows the Rides
-       // recyclerView = view.findViewById<View>(R.id.RecyclerView) as RecyclerView
+        // recyclerView = view.findViewById<View>(R.id.RecyclerView) as RecyclerView
         //recyclerView!!.layoutManager = LinearLayoutManager(context)
         //recyclerView!!.adapter = rideInfoAdapter
 
@@ -82,9 +82,14 @@ class HomeFragment : Fragment() {
             recyclerView!!.layoutManager = LinearLayoutManager(context)
 
             //Starting the Adapter To listen for Data
-            rideInfoAdapter!!.startListening()
-            recyclerView!!.adapter = rideInfoAdapter
-            rideInfoAdapter = RideInfoAdapter(options)
+            try {
+                rideInfoAdapter!!.startListening()
+                recyclerView!!.adapter = rideInfoAdapter
+                rideInfoAdapter = RideInfoAdapter(options)
+            }
+            catch (e: NullPointerException){
+                rideInfoAdapter = null
+            }
 
 
             //Setting the Adapter to RecyclerView
