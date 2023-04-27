@@ -78,7 +78,11 @@ class CustomerProfileFragment : Fragment() {
                     val model = snapshot.getValue(
                         Model::class.java
                     )
-                    
+
+                    //using  picasso repository to  load the image into image view from a url
+                    Picasso.get().load(model!!.profilePic).into(circleImageView)
+                    userName!!.text = model.userName
+                    phoneNumber!!.text = model.phoneNumber
                 }
 
                 override fun onCancelled(error: DatabaseError) {}

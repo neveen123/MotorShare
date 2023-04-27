@@ -32,7 +32,8 @@
         android:background="@drawable/search_layout_background"
         android:hint="  type phone number here"
         android:textColorHint="@color/white"
-        android:inputType="number"
+        android:inputType="phone"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="25dp" />
 

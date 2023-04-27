@@ -67,12 +67,12 @@ class CustomerLoginActivity() : AppCompatActivity() {
             //Gets phone number from the EditText
             val phoneNumber = filterNumber(phoneNumberEditTxt!!.text.toString())
 
-            if (phoneNumber.length < 10) {
+            if (phoneNumber.length > 10 || phoneNumber.length < 10) {
 
                 //Shows the Below Toast if the number editText is empty
                 Toast.makeText(
                     applicationContext,
-                    "Please enter your number",
+                    "Please enter a 10-digit number",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
@@ -98,7 +98,7 @@ class CustomerLoginActivity() : AppCompatActivity() {
         }
     }
 
-    public fun filterNumber(phoneNumber: String): String{
+    private fun filterNumber(phoneNumber: String): String{
         var phoneNumberEdit = phoneNumber
         phoneNumberEdit = phoneNumberEdit.filterNot { it <= ' ' }
         phoneNumberEdit = phoneNumberEdit.filterNot { it <= '-' }
